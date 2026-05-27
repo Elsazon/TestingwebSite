@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5K Familiar · Celebración de Cumpleaños</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">5K · 2026</span>
+      <div class="nav-links">
+        <a href="#detalles">Detalles</a>
+        <a href="#itinerario">Itinerario</a>
+        <a href="#rsvp" class="nav-cta">Confirmar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="wave wave-1"></div>
+      <div class="wave wave-2"></div>
+      <div class="wave wave-3"></div>
+      <div class="coral-blob blob-1"></div>
+      <div class="coral-blob blob-2"></div>
+      <div class="coral-blob blob-3"></div>
+      <div class="bubble-field" aria-hidden="true"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">18 de julio · 2026</p>
+      <!-- EDITABLE: Cambia el nombre del evento aquí -->
+      <h1 class="hero-title">¡Corre<br><em>conmigo!</em></h1>
+      <p class="hero-subtitle">5K Familiar &amp; Celebración de Cumpleaños</p>
+      <p class="hero-description">
+        Corre, celebra y comparte con nosotros un día especial lleno de energía, familia, amistad y buena comida.
+      </p>
+      <div class="hero-actions">
+        <a href="#rsvp" class="btn btn-primary">Confirmar asistencia</a>
+        <a href="#detalles" class="btn btn-outline">Ver detalles</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== COUNTDOWN ========== -->
+  <section class="countdown-section" id="countdown">
+    <div class="container">
+      <p class="section-eyebrow">Faltan…</p>
+      <div class="countdown-grid" id="countdown-grid">
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-days">00</span>
+          <span class="countdown-label">Días</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-minutes">00</span>
+          <span class="countdown-label">Minutos</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-seconds">00</span>
+          <span class="countdown-label">Segundos</span>
+        </div>
+      </div>
+      <p class="countdown-done hidden" id="countdown-done">¡Llegó el día del 5K! 🎉</p>
+    </div>
+  </section>
+
+  <!-- ========== DETALLES DEL EVENTO ========== -->
+  <section class="details-section" id="detalles">
+    <div class="container">
+      <p class="section-eyebrow">El plan</p>
+      <h2 class="section-title">Detalles del evento</h2>
+      <div class="details-grid">
+        <!-- EDITABLE: Actualiza cada card con la información final -->
+        <div class="detail-card accent-coral">
+          <div class="detail-icon">📅</div>
+          <div class="detail-info">
+            <span class="detail-label">Fecha</span>
+            <span class="detail-value">18 de julio de 2026</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🕕</div>
+          <div class="detail-info">
+            <span class="detail-label">Hora de llegada</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🏃</div>
+          <div class="detail-info">
+            <span class="detail-label">Inicio del 5K</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🍽️</div>
+          <div class="detail-info">
+            <span class="detail-label">Comida / Celebración</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">📍</div>
+          <div class="detail-info">
+            <span class="detail-label">Punto de encuentro</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🚗</div>
+          <div class="detail-info">
+            <span class="detail-label">Estacionamiento</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🗺️</div>
+          <div class="detail-info">
+            <span class="detail-label">Dirección</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">💰</div>
+          <div class="detail-info">
+            <span class="detail-label">Costo adicional</span>
+            <span class="detail-value placeholder-text">Por confirmar</span>
+          </div>
+        </div>
+        <div class="detail-card accent-aqua full-width">
+          <div class="detail-icon">🎒</div>
+          <div class="detail-info">
+            <span class="detail-label">Qué traer</span>
+            <!-- EDITABLE: Lista de qué traer -->
+            <span class="detail-value">Agua · Ropa cómoda · Tenis · Protector solar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ITINERARIO ========== -->
+  <section class="schedule-section" id="itinerario">
+    <div class="container">
+      <p class="section-eyebrow">El día</p>
+      <h2 class="section-title">Itinerario</h2>
+      <div class="timeline">
+        <!-- EDITABLE: Actualiza tiempos y actividades -->
+        <div class="timeline-item featured">
+          <div class="timeline-time">6:00 AM</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Countdown oficial</h3>
+            <p>¡Arranca el día más especial del año!</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Llegada y bienvenida</h3>
+            <p>Regístrate y recoge tu número</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Warm-up</h3>
+            <p>Calentamiento grupal antes de la carrera</p>
+          </div>
+        </div>
+        <div class="timeline-item featured">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>¡Sale el 5K!</h3>
+            <p>5 kilómetros de pura energía familiar</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Break / Descanso</h3>
+            <p>Agua, fotos y a recuperar fuerzas</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Comida después del 5K</h3>
+            <p>¡A comer, que nos lo merecemos!</p>
+          </div>
+        </div>
+        <div class="timeline-item featured">
+          <div class="timeline-time placeholder-text">Por confirmar</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>🎂 Celebración de cumpleaños</h3>
+            <p>Pastel, música y mucho amor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RSVP ========== -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="container">
+      <p class="section-eyebrow">Tu respuesta</p>
+      <h2 class="section-title">Confirma tu asistencia</h2>
+      <p class="section-desc">Llena el formulario para que te tengamos en cuenta. Puedes actualizar tu respuesta cuando quieras con tu código RSVP.</p>
+
+      <!-- FORMULARIO RSVP -->
+      <div class="form-card" id="form-card">
+        <!-- Modo actualización: ingresa código RSVP -->
+        <div class="update-mode-toggle">
+          <p>¿Ya respondiste antes? <button type="button" class="link-btn" id="toggle-update-mode">Actualiza tu respuesta aquí →</button></p>
+        </div>
+        <div class="update-code-row hidden" id="update-code-row">
+          <label class="form-label" for="rsvp-update-code">Tu código RSVP</label>
+          <div class="code-input-row">
+            <input type="text" id="rsvp-update-code" class="form-input code-input" placeholder="5K-XXXXXX" maxlength="9" />
+            <button type="button" class="btn btn-small btn-aqua" id="apply-code-btn">Aplicar</button>
+          </div>
+          <p class="update-status hidden" id="update-status"></p>
+          <button type="button" class="link-btn" id="toggle-new-mode">← Llenar como nuevo</button>
+        </div>
+
+        <div class="mode-badge hidden" id="mode-badge">
+          <span>✏️ Modo actualización · <strong id="active-code-display"></strong></span>
+        </div>
+
+        <div class="form-body" id="form-body">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label" for="f-nombre">Nombre completo <span class="required">*</span></label>
+              <input type="text" id="f-nombre" class="form-input" placeholder="Tu nombre completo" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-telefono">Teléfono <span class="required">*</span></label>
+              <input type="tel" id="f-telefono" class="form-input" placeholder="+1 (000) 000-0000" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email <span class="required">*</span></label>
+              <input type="email" id="f-email" class="form-input" placeholder="tu@correo.com" autocomplete="email" />
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="f-asistencia">¿Cómo participarás? <span class="required">*</span></label>
+              <select id="f-asistencia" class="form-select">
+                <option value="">— Selecciona una opción —</option>
+                <option value="Solo correré el 5K">Solo correré el 5K 🏃</option>
+                <option value="Solo iré a comer después del 5K">Solo iré a comer después del 5K 🍽️</option>
+                <option value="Correré el 5K y también iré a comer">Correré el 5K y también iré a comer 🏃🍽️</option>
+                <option value="No podré asistir">No podré asistir 😔</option>
+                <option value="No estoy seguro todavía">No estoy seguro todavía 🤔</option>
+              </select>
+            </div>
+            <div class="form-group" id="group-acompanantes">
+              <label class="form-label" for="f-cantidad">Acompañantes adicionales</label>
+              <input type="number" id="f-cantidad" class="form-input" placeholder="0" min="0" max="20" value="0" />
+              <p class="form-hint">Personas adicionales que vienen contigo (sin contarte a ti)</p>
+            </div>
+            <div class="form-group" id="group-nombres-acompanantes">
+              <label class="form-label" for="f-nombres-acompanantes">Nombres de acompañantes</label>
+              <input type="text" id="f-nombres-acompanantes" class="form-input" placeholder="Ej: María, Juan, Sofía" />
+              <p class="form-hint">Separa los nombres con comas</p>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="f-notas">Notas adicionales</label>
+              <textarea id="f-notas" class="form-textarea" placeholder="¿Alguna restricción alimentaria, necesidad especial o comentario?"></textarea>
+            </div>
+          </div>
+
+          <div class="form-error hidden" id="form-error" role="alert"></div>
+
+          <button type="button" class="btn btn-primary btn-submit" id="submit-btn">
+            <span class="btn-text">Confirmar asistencia</span>
+            <span class="btn-loading hidden">
+              <span class="spinner"></span> Enviando…
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONFIRMACIÓN ========== -->
+  <div class="confirmation-overlay hidden" id="confirmation-overlay">
+    <div class="confirmation-card">
+      <div class="confirmation-icon">🎉</div>
+      <h2 id="confirmation-title">¡Gracias por confirmar!</h2>
+      <p id="confirmation-subtitle">Recibimos tu respuesta. ¡Nos vemos el 18 de julio!</p>
+
+      <div class="rsvp-code-display">
+        <p class="rsvp-code-label">Tu código RSVP</p>
+        <div class="rsvp-code-value" id="conf-code">—</div>
+        <p class="rsvp-code-hint">Guarda este código si deseas actualizar tu asistencia más adelante.</p>
+      </div>
+
+      <div class="confirmation-summary" id="conf-summary"></div>
+
+      <button type="button" class="btn btn-outline" id="close-confirmation">Volver al inicio</button>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">18 de julio de 2026 · Con mucho amor y energía 🌊</p>
+      <p class="footer-sub">¿Preguntas? Escríbenos directamente.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
