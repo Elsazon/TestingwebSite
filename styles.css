@@ -216,8 +216,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .hero-logo-icon { animation-duration: 40s; }
   .strava-section { height: 100svh; max-height: 100svh; }
   .strava-bg-img { object-position: 30% center; }
-  .strava-overlay { background: linear-gradient(to bottom, rgba(18,52,59,0.55) 0%, rgba(18,52,59,0.4) 40%, rgba(18,52,59,0.1) 60%, rgba(18,52,59,0.8) 100%), linear-gradient(to right, rgba(18,52,59,0.6) 0%, transparent 100%); }
-  .strava-text-box { top: auto; bottom: 160px; transform: none; padding: 0 24px; max-width: 100%; }
+  .strava-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, transparent 65%), linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.45) 100%); }
   .strava-title { font-size: 2.4rem; }
   .strava-footer-cta { bottom: 36px; }
   .countdown-inner { padding: 64px 16px 56px; gap: 36px; }
