@@ -215,7 +215,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .hero-title { font-size: 3.8rem; }
   .hero-logo-icon { animation-duration: 40s; }
   .strava-section { height: 100svh; max-height: 100svh; }
-  .strava-bg-img { object-position: 30% center; }
+  .strava-bg-img { object-position: 60% center; }
   
   .strava-footer-cta { bottom: 36px; }
   .countdown-inner { padding: 64px 16px 56px; gap: 36px; }
