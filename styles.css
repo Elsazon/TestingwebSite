@@ -276,3 +276,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (min-width: 541px) and (max-width: 760px) {
   .gallery-grid { grid-template-rows: 220px 220px; }
 }
+/* Seamless gallery transition */
+.gallery-section { margin-top: 0; padding-top: 0; }
+.gallery-header { padding-top: 56px; }
+.strava-section + .gallery-section { margin-top: 0; }
