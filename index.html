@@ -26,6 +26,7 @@
       </a>
       <div class="nav-links">
         <a href="#strava">La ruta</a>
+        <a href="#inscripcion">Inscripción</a>
         <a href="#detalles">Detalles</a>
         <a href="#itinerario">Itinerario</a>
         <a href="#rsvp" class="nav-cta">Confirmar</a>
@@ -35,32 +36,25 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-bg">
+    <!-- Photo background -->
+    <img src="hero-bg.jpg" alt="La protagonista del 5K" class="hero-photo-bg" />
+    <!-- Overlay for text legibility -->
+    <div class="hero-photo-overlay"></div>
+    <!-- Original animated elements on top -->
+    <div class="hero-bg hero-bg-accent">
       <div class="wave wave-1"></div>
       <div class="wave wave-2"></div>
       <div class="wave wave-3"></div>
-      <div class="coral-blob blob-1"></div>
-      <div class="coral-blob blob-2"></div>
-      <div class="coral-blob blob-3"></div>
       <div class="bubble-field" aria-hidden="true"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-logo-icon" aria-hidden="true">
-        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="36" cy="36" r="35" stroke="#ff6f61" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
-          <circle cx="36" cy="36" r="28" fill="rgba(255,111,97,0.07)"/>
-          <circle cx="36" cy="20" r="5" fill="#ff6f61"/>
-          <path d="M36 26 L33 38 L29 46 M36 26 L39 38 L43 46 M30 32 L42 32" stroke="#ff6f61" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <path d="M18 54 Q24 48 30 52 Q36 56 42 50 Q48 44 54 48" stroke="#4ecdc4" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/>
-        </svg>
-      </div>
       <p class="hero-eyebrow">18 de julio · 2026</p>
       <h1 class="hero-title">Corre<br><em>conmigo!</em></h1>
       <p class="hero-subtitle">5K Familiar &amp; Celebración de Cumpleaños</p>
       <p class="hero-description">Corre, celebra y comparte con nosotros un día especial lleno de energía, familia, amistad y buena comida.</p>
       <div class="hero-actions">
         <a href="#rsvp" class="btn btn-primary">Confirmar asistencia</a>
-        <a href="#detalles" class="btn btn-outline">Ver detalles</a>
+        <a href="#detalles" class="btn btn-outline-light">Ver detalles</a>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -71,7 +65,7 @@
 
   <!-- STRAVA — full bleed cinematic -->
   <section class="strava-section" id="strava">
-    <img src="IMG_0200.png" alt="Ruta del 5K — San Juan" class="strava-bg-img" loading="lazy" />
+    <img src="IMG_0200.PNG" alt="Ruta del 5K — San Juan" class="strava-bg-img" loading="lazy" />
     <div class="strava-overlay"></div>
     <!-- Text overlay: left side -->
     <div class="strava-text-box">
@@ -113,7 +107,10 @@
           <span class="countdown-number" id="cd-seconds">00</span>
           <span class="countdown-label">Segundos</span>
         </div>
-      
+      </div>
+      <p class="countdown-done hidden" id="countdown-done">¡Llegó el día del 5K! 🎉</p>
+      <a href="#rsvp" class="btn btn-primary countdown-rsvp-btn">Confirmar asistencia</a>
+    </div>
   </section>
 
 
@@ -144,6 +141,192 @@
       </div>
     </div>
   </section>
+
+
+  <!-- INSCRIPCION -->
+  <section class="registration-section" id="inscripcion">
+    <div class="container">
+      <p class="section-eyebrow">Inscripción</p>
+      <h2 class="section-title">Tu inscripción apoya<br>una misión más grande</h2>
+      <p class="section-desc">Este año, lo recaudado en inscripciones ayudará a cubrir gastos del viaje misionero a Honduras en julio 2026. Corre por ti, y de paso ayuda a otros. 💙</p>
+
+      <div class="registration-card">
+        <div class="registration-price-badge">
+          <span class="reg-price-amount">$15</span>
+          <span class="reg-price-label">por persona</span>
+        </div>
+
+        <div class="registration-includes">
+          <h3 class="reg-includes-title">Tu inscripción incluye</h3>
+          <ul class="reg-includes-list">
+            <li>
+              <span class="reg-icon">🏅</span>
+              <span>Certificado de participación</span>
+            </li>
+            <li>
+              <span class="reg-icon">🍫</span>
+              <span>Snack de proteína <em>(brownie o donas)</em></span>
+            </li>
+            <li>
+              <span class="reg-icon">💉</span>
+              <span>Immunity shot</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="registration-payment">
+          <p class="reg-payment-label">Pago vía ATH Móvil</p>
+          <div class="reg-payment-number">787-425-1241</div>
+          <p class="reg-payment-hint">Envía tu pago y guarda el comprobante. Te pediremos confirmar el pago al llenar el RSVP.</p>
+        </div>
+
+        <div class="registration-mission">
+          <span class="reg-mission-icon">🇭🇳</span>
+          <p>100% de lo recaudado en inscripciones va directo al fondo del viaje misionero a Honduras, julio 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section class="dresscode-section">
+    <div class="container">
+      <div class="dresscode-card">
+        <div class="dresscode-icon">👕</div>
+        <div class="dresscode-info">
+          <p class="section-eyebrow" style="margin-bottom:6px;">Dress code sugerido</p>
+          <h3 class="dresscode-title">Viste de <em>coral</em></h3>
+          <p class="dresscode-desc">No es obligatorio, pero si quieres sumarte al vibe del evento, viste tonos coral, naranja o salmón. ¡Vamos a brillar juntos en las fotos! 🧡</p>
+          <div class="dresscode-swatches">
+            <span class="swatch" style="background:#ff6f61;"></span>
+            <span class="swatch" style="background:#ff9a8b;"></span>
+            <span class="swatch" style="background:#f4c95d;"></span>
+            <span class="swatch" style="background:#ffb4a2;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEVITA TRUE FIT NUTRITION -->
+  <section class="sevita-section">
+    <div class="container">
+      <div class="sevita-card">
+        <div class="sevita-logo-wrap">
+          <img src="sevita-logo.jpg" alt="Sevita True Fit Nutrition" class="sevita-logo" loading="lazy" />
+        </div>
+        <div class="sevita-info">
+          <p class="section-eyebrow">Patrocinador local</p>
+          <h2 class="sevita-title">¿Antojo de algo<br><em>refrescante</em>?</h2>
+          <p class="sevita-desc">Sevita True Fit Nutrition trae sus Mega Té directo al evento. Bebidas refrescantes, saludables y llenas de sabor — perfectas para después de correr.</p>
+
+          <div class="sevita-price-tag">
+            <span class="sevita-price">$10</span>
+            <span class="sevita-price-label">Mega Té · Cualquier sabor</span>
+          </div>
+
+          <button type="button" class="btn btn-primary sevita-cta" id="open-megate-modal">
+            Ver sabores y ordenar 🥤
+          </button>
+
+          <p class="sevita-delivery">Delivery área metro · Lunes a sábado · 8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEGA TE MODAL / FORM -->
+  <div class="megate-overlay hidden" id="megate-overlay">
+    <div class="megate-card">
+      <button type="button" class="megate-close" id="megate-close" aria-label="Cerrar">×</button>
+
+      <div class="megate-header">
+        <p class="section-eyebrow">Sevita True Fit Nutrition</p>
+        <h2 class="megate-title">Pide tu Mega Té</h2>
+        <p class="megate-sub">Selecciona tu sabor favorito. Te contactaremos para coordinar el pago y la entrega.</p>
+      </div>
+
+      <div class="megate-menu-img-wrap">
+        <img src="megate-menu.jpg" alt="Menú de sabores Mega Té" class="megate-menu-img" loading="lazy" />
+      </div>
+
+      <div class="megate-form-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label" for="mt-nombre">Nombre completo <span class="required">*</span></label>
+            <input type="text" id="mt-nombre" class="form-input" placeholder="Tu nombre completo" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mt-telefono">Teléfono <span class="required">*</span></label>
+            <input type="tel" id="mt-telefono" class="form-input" placeholder="+1 (000) 000-0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mt-cantidad">Cantidad</label>
+            <input type="number" id="mt-cantidad" class="form-input" placeholder="1" min="1" max="20" value="1" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="mt-sabor">¿Qué sabor quieres? <span class="required">*</span></label>
+            <select id="mt-sabor" class="form-select">
+              <option value="">— Selecciona un sabor —</option>
+              <option value="Granada">Granada</option>
+              <option value="Green Apple">Green Apple</option>
+              <option value="Blue Blast">Blue Blast</option>
+              <option value="Uva">Uva</option>
+              <option value="Coco">Coco</option>
+              <option value="Pitaya">Pitaya</option>
+              <option value="Mango">Mango</option>
+              <option value="China">China</option>
+              <option value="Cranberry">Cranberry</option>
+              <option value="Limón">Limón</option>
+              <option value="Limonada">Limonada</option>
+              <option value="Watermelon">Watermelon</option>
+              <option value="Parcha">Parcha</option>
+              <option value="Fresa">Fresa</option>
+              <option value="Fresa Kiwi">Fresa Kiwi</option>
+              <option value="Fresa Limón">Fresa Limón</option>
+              <option value="Fresa Coco">Fresa Coco</option>
+              <option value="Fresa Parcha">Fresa Parcha</option>
+              <option value="Parcha Coco">Parcha Coco</option>
+              <option value="Blue Coco">Blue Coco</option>
+              <option value="Green Coco">Green Coco</option>
+              <option value="Pitaya Coco">Pitaya Coco</option>
+              <option value="Iced Tea">Iced Tea</option>
+              <option value="Vino">Vino</option>
+              <option value="Peach">Peach</option>
+              <option value="Piña Colada">Piña Colada</option>
+              <option value="Frutas Tropicales">Frutas Tropicales</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="mt-notas">Notas adicionales</label>
+            <textarea id="mt-notas" class="form-textarea" placeholder="¿Algo más que debamos saber?"></textarea>
+          </div>
+        </div>
+
+        <div class="megate-payment-note">
+          <p>Pago vía ATH Móvil: <strong>787-425-1241</strong> · $10 por Mega Té</p>
+        </div>
+
+        <div class="form-error hidden" id="megate-error" role="alert"></div>
+
+        <button type="button" class="btn btn-primary btn-submit" id="megate-submit-btn">
+          <span class="btn-text">Enviar pedido</span>
+          <span class="btn-loading hidden"><span class="spinner"></span> Enviando...</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEGA TE CONFIRMATION -->
+  <div class="confirmation-overlay hidden" id="megate-confirmation-overlay">
+    <div class="confirmation-card">
+      <div class="confirmation-icon">🥤</div>
+      <h2>¡Pedido recibido!</h2>
+      <p>Gracias por apoyar a Sevita True Fit Nutrition. Te contactaremos pronto para coordinar el pago y la entrega.</p>
+      <div class="confirmation-summary" id="megate-conf-summary"></div>
+      <button type="button" class="btn btn-outline" id="megate-close-confirmation">Cerrar</button>
+    </div>
+  </div>
 
   <!-- DETALLES -->
   <section class="details-section" id="detalles">
