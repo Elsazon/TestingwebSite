@@ -288,3 +288,433 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .schedule-section { padding-bottom: 48px; }
   .rsvp-section { padding-top: 48px; }
 }
+/* ════════════════════════════════
+   REGISTRATION SECTION
+   ════════════════════════════════ */
+.registration-section {
+  padding: 96px 0;
+  background: var(--cream);
+}
+
+.registration-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-price-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, var(--coral) 0%, var(--soft-coral) 100%);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(255,111,97,0.3);
+}
+
+.reg-price-amount {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.reg-price-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.reg-includes-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--deep-ocean);
+  margin-bottom: 16px;
+}
+
+.reg-includes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.reg-includes-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+}
+
+.reg-includes-list li em {
+  color: var(--text-mid);
+  font-style: italic;
+  font-size: 0.88rem;
+}
+
+.reg-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.registration-payment {
+  background: linear-gradient(135deg, rgba(78,205,196,0.08) 0%, rgba(184,242,230,0.15) 100%);
+  border: 1.5px solid rgba(78,205,196,0.3);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.reg-payment-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.reg-payment-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--deep-ocean);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.reg-payment-hint {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.registration-mission {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--deep-ocean);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+}
+
+.reg-mission-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.registration-mission p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════
+   DRESS CODE
+   ════════════════════════════════ */
+.dresscode-section {
+  padding: 0 0 96px;
+  background: var(--cream);
+}
+
+.dresscode-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(255,154,139,0.1) 0%, var(--white) 100%);
+  border: 1.5px solid rgba(255,111,97,0.25);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.dresscode-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.dresscode-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--deep-ocean);
+  margin-bottom: 8px;
+}
+
+.dresscode-title em {
+  color: var(--coral);
+  font-style: italic;
+}
+
+.dresscode-desc {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.dresscode-swatches {
+  display: flex;
+  gap: 8px;
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ════════════════════════════════
+   SEVITA TRUE FIT NUTRITION
+   ════════════════════════════════ */
+.sevita-section {
+  padding: 0 0 96px;
+  background: var(--cream);
+}
+
+.sevita-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 36px;
+  align-items: center;
+  background: var(--deep-ocean);
+  border-radius: var(--radius);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sevita-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 90% 10%, rgba(78,205,196,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(255,111,97,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sevita-logo-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.sevita-logo {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.sevita-info {
+  position: relative;
+  z-index: 1;
+}
+
+.sevita-section .section-eyebrow {
+  color: var(--aqua);
+}
+
+.sevita-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.sevita-title em {
+  font-style: italic;
+  color: var(--soft-coral);
+  font-weight: 600;
+}
+
+.sevita-desc {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.sevita-price-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(78,205,196,0.25);
+  border-radius: var(--radius-pill);
+  padding: 10px 22px;
+  margin-bottom: 24px;
+}
+
+.sevita-price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.sevita-price-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+.sevita-cta {
+  margin-bottom: 16px;
+}
+
+.sevita-delivery {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.04em;
+}
+
+/* ════════════════════════════════
+   MEGA TE MODAL
+   ════════════════════════════════ */
+.megate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18,52,59,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: overlayIn 0.3s ease;
+  overflow-y: auto;
+}
+
+.megate-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(18,52,59,0.24);
+  animation: cardIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.megate-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--text-mid);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+
+.megate-close:hover {
+  background: var(--coral);
+  color: var(--white);
+}
+
+.megate-header {
+  padding: 32px 32px 16px;
+}
+
+.megate-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--deep-ocean);
+  margin: 6px 0;
+}
+
+.megate-sub {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.megate-menu-img-wrap {
+  padding: 0 32px;
+}
+
+.megate-menu-img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+}
+
+.megate-form-body {
+  padding: 24px 32px 32px;
+}
+
+.megate-payment-note {
+  background: linear-gradient(135deg, rgba(78,205,196,0.08) 0%, rgba(184,242,230,0.15) 100%);
+  border: 1.5px solid rgba(78,205,196,0.3);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.megate-payment-note p {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+.megate-payment-note strong {
+  color: var(--deep-ocean);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.04em;
+}
+
+/* ════════════════════════════════
+   MOBILE
+   ════════════════════════════════ */
+@media (max-width: 540px) {
+  .registration-section { padding: 56px 0; }
+  .registration-card { padding: 28px 20px; }
+  .reg-price-amount { font-size: 2.4rem; }
+  .registration-price-badge { padding: 16px 28px; }
+  .reg-includes-list li { font-size: 0.88rem; padding: 12px 14px; }
+  .reg-payment-number { font-size: 1.5rem; }
+
+  .dresscode-section { padding: 0 0 56px; }
+  .dresscode-card { flex-direction: column; text-align: center; padding: 24px; }
+  .dresscode-swatches { justify-content: center; }
+
+  .sevita-section { padding: 0 0 56px; }
+  .sevita-card { grid-template-columns: 1fr; padding: 28px 20px; text-align: center; }
+  .sevita-logo-wrap { max-width: 160px; margin: 0 auto; }
+  .sevita-title { font-size: 1.7rem; }
+  .sevita-price-tag { display: flex; justify-content: center; }
+
+  .megate-header { padding: 24px 20px 12px; }
+  .megate-menu-img-wrap { padding: 0 20px; }
+  .megate-form-body { padding: 20px 20px 24px; }
+  .megate-title { font-size: 1.5rem; }
+}
