@@ -417,3 +417,150 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 });
+
+// ============================================
+// MEGA TÉ — Sevita True Fit Nutrition
+// ============================================
+
+/**
+ * Endpoint separado para pedidos de Mega Té.
+ * Puede ser el mismo Google Apps Script (con un "mode" distinto)
+ * o un Web App / Google Form diferente — tú decides.
+ */
+const MEGATE_ENDPOINT = "PASTE_MEGATE_ENDPOINT_HERE";
+
+let megateSubmitting = false;
+
+// Abrir modal
+const openMegateBtn = document.getElementById('open-megate-modal');
+if (openMegateBtn) {
+  openMegateBtn.addEventListener('click', () => {
+    document.getElementById('megate-overlay').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+// Cerrar modal
+function closeMegateModal() {
+  document.getElementById('megate-overlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+const megateCloseBtn = document.getElementById('megate-close');
+if (megateCloseBtn) {
+  megateCloseBtn.addEventListener('click', closeMegateModal);
+}
+
+const megateOverlay = document.getElementById('megate-overlay');
+if (megateOverlay) {
+  megateOverlay.addEventListener('click', (e) => {
+    if (e.target === megateOverlay) closeMegateModal();
+  });
+}
+
+// Validación
+function validateMegateForm() {
+  const nombre = document.getElementById('mt-nombre').value.trim();
+  const telefono = document.getElementById('mt-telefono').value.trim();
+  const sabor = document.getElementById('mt-sabor').value;
+
+  if (!nombre) return 'Por favor ingresa tu nombre completo.';
+  if (!telefono) return 'Por favor ingresa tu número de teléfono.';
+  if (!sabor) return 'Por favor selecciona un sabor.';
+  return null;
+}
+
+// Submit
+const megateSubmitBtn = document.getElementById('megate-submit-btn');
+if (megateSubmitBtn) {
+  megateSubmitBtn.addEventListener('click', async () => {
+    if (megateSubmitting) return;
+
+    const error = validateMegateForm();
+    const errorBox = document.getElementById('megate-error');
+
+    if (error) {
+      errorBox.textContent = error;
+      errorBox.classList.remove('hidden');
+      return;
+    }
+    errorBox.classList.add('hidden');
+
+    const payload = {
+      mode: 'megate-order',
+      timestamp: new Date().toISOString(),
+      nombre: document.getElementById('mt-nombre').value.trim(),
+      telefono: document.getElementById('mt-telefono').value.trim(),
+      cantidad: parseInt(document.getElementById('mt-cantidad').value, 10) || 1,
+      sabor: document.getElementById('mt-sabor').value,
+      notas: document.getElementById('mt-notas').value.trim(),
+      source: 'Website',
+    };
+
+    megateSubmitting = true;
+    const btnText = megateSubmitBtn.querySelector('.btn-text');
+    const btnLoading = megateSubmitBtn.querySelector('.btn-loading');
+    btnText.classList.add('hidden');
+    btnLoading.classList.remove('hidden');
+    megateSubmitBtn.disabled = true;
+
+    try {
+      const response = await fetch(MEGATE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'cors',
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        showMegateConfirmation(payload);
+      } else {
+        throw new Error(result.error || 'Error desconocido del servidor.');
+      }
+    } catch (err) {
+      errorBox.textContent = 'No pudimos enviar tu pedido. Intenta nuevamente.';
+      errorBox.classList.remove('hidden');
+    } finally {
+      megateSubmitting = false;
+      btnText.classList.remove('hidden');
+      btnLoading.classList.add('hidden');
+      megateSubmitBtn.disabled = false;
+    }
+  });
+}
+
+// Mostrar confirmación
+function showMegateConfirmation(payload) {
+  closeMegateModal();
+
+  const summary = document.getElementById('megate-conf-summary');
+  summary.innerHTML = `
+    <p>
+      <strong>Nombre:</strong> ${payload.nombre}<br>
+      <strong>Sabor:</strong> ${payload.sabor}<br>
+      <strong>Cantidad:</strong> ${payload.cantidad}<br>
+      <strong>Total:</strong> $${(payload.cantidad * 10).toFixed(2)}
+      ${payload.notas ? `<br><strong>Notas:</strong> ${payload.notas}` : ''}
+    </p>
+  `;
+
+  document.getElementById('megate-confirmation-overlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+const megateCloseConfirmBtn = document.getElementById('megate-close-confirmation');
+if (megateCloseConfirmBtn) {
+  megateCloseConfirmBtn.addEventListener('click', () => {
+    document.getElementById('megate-confirmation-overlay').classList.add('hidden');
+    document.body.style.overflow = '';
+
+    // Reset form
+    document.getElementById('mt-nombre').value = '';
+    document.getElementById('mt-telefono').value = '';
+    document.getElementById('mt-cantidad').value = '1';
+    document.getElementById('mt-sabor').value = '';
+    document.getElementById('mt-notas').value = '';
+  });
+}
