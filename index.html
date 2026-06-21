@@ -15,7 +15,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#inicio" class="nav-logo" aria-label="5K 2026">
-        <img src="IMG_0259.png" alt="5K Familiar 2026" class="nav-logo-img" />
+        <img src="logo-transparente.png" alt="5K Familiar 2026" class="nav-logo-img" />
         <span class="nav-logo-text">5K <em>2026</em></span>
       </a>
       <div class="nav-links">
@@ -37,11 +37,31 @@
       <div class="bubble-field" aria-hidden="true"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-logo-wrap">
-        <img src="IMG_0259.png" alt="5K Familiar 2026" class="hero-logo-img" />
-        <span class="hero-logo-text">5K <em>2026</em></span>
+      <div class="hero-countdown" id="hero-countdown">
+        <p class="hero-countdown-label">El día llega</p>
+        <div class="hero-countdown-grid" id="countdown-grid">
+          <div class="hero-countdown-unit">
+            <span class="hero-countdown-number" id="cd-days">00</span>
+            <span class="hero-countdown-unit-label">Días</span>
+          </div>
+          <span class="hero-countdown-sep">:</span>
+          <div class="hero-countdown-unit">
+            <span class="hero-countdown-number" id="cd-hours">00</span>
+            <span class="hero-countdown-unit-label">Horas</span>
+          </div>
+          <span class="hero-countdown-sep">:</span>
+          <div class="hero-countdown-unit">
+            <span class="hero-countdown-number" id="cd-minutes">00</span>
+            <span class="hero-countdown-unit-label">Min</span>
+          </div>
+          <span class="hero-countdown-sep">:</span>
+          <div class="hero-countdown-unit">
+            <span class="hero-countdown-number" id="cd-seconds">00</span>
+            <span class="hero-countdown-unit-label">Seg</span>
+          </div>
+        </div>
+        <p class="hero-countdown-done hidden" id="countdown-done">¡Llegó el día del 5K! 🎉</p>
       </div>
-      <p class="hero-eyebrow">18 de julio · 2026</p>
       <h1 class="hero-title">Corre<br><em>conmigo!</em></h1>
       <p class="hero-subtitle">5K Familiar &amp; Celebración de Cumpleaños</p>
       <p class="hero-description">Corre, celebra y comparte con nosotros un día especial lleno de energía, familia, amistad y buena comida.</p>
@@ -66,41 +86,6 @@
       <p class="strava-desc">Esta es la ruta que vamos a conquistar juntos el 18 de julio. Preparé el camino, tú pones la energía.</p>
     </div>
   </section>
-
-
-  <!-- COUNTDOWN -->
-  <section class="countdown-section" id="countdown">
-    <div class="countdown-inner">
-      <div class="countdown-header">
-        <p class="countdown-eyebrow">El día llega</p>
-        <h2 class="countdown-headline">18 de julio · 2026</h2>
-        <p class="countdown-sub">5K Familiar &amp; Celebración de Cumpleaños</p>
-      </div>
-      <div class="countdown-grid" id="countdown-grid">
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-days">00</span>
-          <span class="countdown-label">Días</span>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-hours">00</span>
-          <span class="countdown-label">Horas</span>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-minutes">00</span>
-          <span class="countdown-label">Minutos</span>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-seconds">00</span>
-          <span class="countdown-label">Segundos</span>
-        </div>
-      </div>
-      <p class="countdown-done hidden" id="countdown-done">¡Llegó el día del 5K! 🎉</p>
-    </div>
-  </section>
-
 
 
   <!-- GALERIA DE LA RUTA -->
