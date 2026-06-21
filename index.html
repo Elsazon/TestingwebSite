@@ -1,4 +1,3 @@
-//ok
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +15,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#inicio" class="nav-logo" aria-label="5K 2026">
-        <img src="9162FD5A-6521-4632-9B47-58DD5F021205.png" alt="5K Familiar 2026" class="nav-logo-img" />
+        <img src="logo-transparente.png" alt="5K Familiar 2026" class="nav-logo-img" />
         <span class="nav-logo-text">5K <em>2026</em></span>
       </a>
       <div class="nav-links">
@@ -100,7 +99,6 @@
         </div>
       </div>
       <p class="countdown-done hidden" id="countdown-done">¡Llegó el día del 5K! 🎉</p>
-      <a href="#rsvp" class="btn btn-primary countdown-rsvp-btn">Confirmar asistencia</a>
     </div>
   </section>
 
@@ -210,6 +208,27 @@
           <div class="detail-info">
             <span class="detail-label">Que traer</span>
             <span class="detail-value">Agua · Ropa comoda · Tenis · Protector solar</span>
+          </div>
+        </div>
+
+        <!-- Dress code interactivo -->
+        <div class="detail-card dresscode-card-inline full-width">
+          <div class="dresscode-shirt-wrap">
+            <svg class="dresscode-shirt" id="dresscode-shirt" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="shirt-body" d="M40 26 L28 34 L20 50 L30 58 L38 50 L38 96 Q38 100 42 100 L78 100 Q82 100 82 96 L82 50 L90 58 L100 50 L92 34 L80 26 Q70 36 60 36 Q50 36 40 26 Z" fill="#ff6f61" stroke="#12343b" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M40 26 Q50 36 60 36 Q70 36 80 26" fill="none" stroke="#12343b" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <span class="detail-label">Dress code sugerido</span>
+            <span class="detail-value">Viste de coral. Toca un color para verlo 🎨</span>
+            <div class="dresscode-swatches" id="dresscode-swatches">
+              <button type="button" class="swatch active" data-color="#ff6f61" style="background:#ff6f61;" aria-label="Coral"></button>
+              <button type="button" class="swatch" data-color="#ff9a8b" style="background:#ff9a8b;" aria-label="Salmón"></button>
+              <button type="button" class="swatch" data-color="#f4c95d" style="background:#f4c95d;" aria-label="Gold"></button>
+              <button type="button" class="swatch" data-color="#ffb4a2" style="background:#ffb4a2;" aria-label="Durazno"></button>
+              <button type="button" class="swatch" data-color="#e8825d" style="background:#e8825d;" aria-label="Naranja"></button>
+            </div>
           </div>
         </div>
       </div>
@@ -323,26 +342,6 @@
         <div class="registration-mission">
           <span class="reg-mission-icon">🇭🇳</span>
           <p>100% de lo recaudado en inscripciones va directo al fondo del viaje misionero a Honduras, julio 2026.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DRESS CODE -->
-  <section class="dresscode-section">
-    <div class="container">
-      <div class="dresscode-card">
-        <div class="dresscode-icon">👕</div>
-        <div class="dresscode-info">
-          <p class="section-eyebrow" style="margin-bottom:6px;">Dress code sugerido</p>
-          <h3 class="dresscode-title">Viste de <em>coral</em></h3>
-          <p class="dresscode-desc">No es obligatorio, pero si quieres sumarte al vibe del evento, viste tonos coral, naranja o salmón. ¡Vamos a brillar juntos en las fotos! 🧡</p>
-          <div class="dresscode-swatches">
-            <span class="swatch" style="background:#ff6f61;"></span>
-            <span class="swatch" style="background:#ff9a8b;"></span>
-            <span class="swatch" style="background:#f4c95d;"></span>
-            <span class="swatch" style="background:#ffb4a2;"></span>
-          </div>
         </div>
       </div>
     </div>
