@@ -1469,11 +1469,33 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .gallery-section {
   background: var(--deep-ocean);
   padding-bottom: 0;
+  position: relative;
+}
+
+.gallery-section::after {
+  content: '';
+  display: block;
+  height: 100px;
+  background: linear-gradient(to bottom, var(--deep-ocean) 0%, var(--cream) 100%);
 }
 
 .gallery-header {
   padding-top: 80px;
   padding-bottom: 48px;
+  position: relative;
+}
+
+.gallery-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--coral), var(--aqua));
+  opacity: 0.5;
+  border-radius: 2px;
 }
 
 .gallery-header .section-title {
@@ -2124,4 +2146,67 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (max-width: 540px) {
   .dresscode-card-inline { flex-direction: column; text-align: center; }
   .dresscode-card-inline .dresscode-swatches { justify-content: center; }
+}
+
+/* ════════════════════════════════
+   WHATSAPP GROUP BANNER
+   ════════════════════════════════ */
+.whatsapp-banner {
+  background: var(--cream);
+  padding: 0 0 56px;
+}
+
+.whatsapp-banner-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, rgba(78,205,196,0.1) 0%, rgba(184,242,230,0.18) 100%);
+  border: 1.5px solid rgba(78,205,196,0.3);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.whatsapp-banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(78,205,196,0.5);
+}
+
+.whatsapp-banner-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.whatsapp-banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+.whatsapp-banner-text strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--deep-ocean);
+}
+
+.whatsapp-banner-arrow {
+  font-size: 1.3rem;
+  color: var(--aqua);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.whatsapp-banner-link:hover .whatsapp-banner-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 540px) {
+  .whatsapp-banner { padding: 0 0 40px; }
+  .whatsapp-banner-link { padding: 16px 18px; gap: 14px; }
+  .whatsapp-banner-text strong { font-size: 0.98rem; }
 }
