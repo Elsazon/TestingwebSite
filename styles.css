@@ -2018,3 +2018,28 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .megate-form-body { padding: 20px 20px 24px; }
   .megate-title { font-size: 1.5rem; }
 }
+.nav-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--deep-ocean);
+  letter-spacing: 0.02em;
+}
+
+.nav-logo-text em {
+  font-style: italic;
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.strava-section {
+  padding-bottom: 0;
+}
+
+.nav-logo { gap: 10px; }
